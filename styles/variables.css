@@ -2,3 +2,40 @@
   Переменные для вашего проекта
   и их переопределение под различные устройства
 */
+:root {
+  /* Тёмная тема (по умолчанию) */
+  --bg-color: #000028;
+  --accent-color: #ff0070;
+  --accent-color-rgb: 255, 0, 112;
+  --capture-color: #ff0070;
+  --main-text-color: #f1b2ce;
+  --large-title-color: #db00ff;
+
+  --font-family: "IBM Plex Mono", monospace;
+  --main-text-size: 18px;
+  --mobile-main-title: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  --capture-size: 24px;
+  --decor-margin: 10px;
+  --min-height: 668px;
+  --mobile-gap: 10px;
+
+  --background-image: url(../images/cover-image-dark.png);
+}
+
+@media (min-width: 768px) {
+  :root {
+    --tablet-gap: 20px;
+    --tablet-columns: repeat(3, 1fr);
+    --decor-margin: 20px;
+    --tablet-main-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --min-height: 1024px;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --desktop-columns: repeat(3, 1fr);
+    --desktop-main-title: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --min-height: 768px;
+  }
+}
